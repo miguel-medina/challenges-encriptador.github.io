@@ -1,0 +1,253 @@
+* {
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: #f3f5fc;
+}
+
+.contenedor {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr 1.5fr;
+    height: 100%;
+    box-sizing: border-box;
+    padding: 1%;
+    gap: 2%;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagenlogo {
+    width: 30%;
+}
+
+.mensaje {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+#miTexto {
+    margin: auto;
+    width: 80%;
+    height: 60%;
+    resize: none;
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: #0a3871;
+}
+
+textarea:focus {
+    outline: none;
+}
+
+::placeholder {
+    font-size: 18px;
+    color: #0a3871;
+}
+
+.botones {
+    display: flex;
+    gap: 3%;
+    padding-bottom: 5%;
+}
+
+.botones button {
+    width: 40%;
+    height: 50px;
+    border-radius: 16px;
+}
+
+.botonencriptador {
+    background: #0a3871;
+    color: white;
+    border: solid 1px #0a3871;
+}
+
+.botondesencriptador {
+    background: #d8dfe8;
+    color: #0a3871;
+    border: solid 1px #0a3871;
+}
+
+@media (hover:hover) {
+    button:hover {
+        background-color: #2980b9;
+    }
+}
+
+button:active {
+    background-color: #b6b6b6;
+}
+
+.muñeco {
+    width: 90%;
+}
+
+.mensajeencriptado {
+    display: flex;
+    background: #ffffff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 32px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.noencontrado {
+    font-weight: bold;
+}
+
+.texto {
+    padding: 5%;
+}
+
+#encriptadoMensaje {
+    display: none;
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+}
+
+#encriptadoMensaje textarea {
+    width: 80%;
+    height: 450px;
+    border: none;
+    resize: none;
+}
+
+.botoncopiar {
+    width: 80%;
+    height: 50px;
+    background: #d8dfe8;
+    border-radius: 16px;
+    color: #0a3871;
+    border: solid 1px #0a3871;
+}
+
+/*******************************************************************/
+
+@media only screen and (max-width: 1000px) and (min-height: 1000px) {
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 2fr 1fr;
+        margin: 2%;
+    }
+
+    .logo {
+        align-items: start;
+    }
+
+    .imagenlogo {
+        width: 5%;
+    }
+
+    #miTexto {
+        font-size: 200%;
+        margin-top: 5%;
+    }
+
+    .botones {
+        display: flex;
+        justify-content: center;
+    }
+
+    .botones button {
+        width: 100%;
+        height: 250%;
+        font-size: 150%;
+        transition: background-color 0.3s ease;
+        /* Ajusta la duración según tus necesidades */
+    }
+
+    .muñeco {
+        display: none;
+    }
+
+    .mensajeencriptado {
+        margin: auto;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        height: 100%;
+        font-size: 25px;
+    }
+
+    #encriptadoMensaje{
+        padding: 5%;
+        width: 115%;
+        height: 115%;
+    }
+
+    #encriptadoMensaje #mensajeDesencriptado{
+        height: 300px;
+    }
+
+    #encriptadoMensaje .botoncopiar{
+        font-size: 25px;
+        height: 80px;
+    }
+}
+/*******************************************************************/
+
+@media only screen and (max-width: 600px) and  (min-height: 600px){
+    .contenedor {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1.5fr 0.7fr;
+        margin: 2%;
+    }
+
+    .logo {
+        align-items: start;
+    }
+
+    .imagenlogo {
+        width: 5%;
+    }
+
+    .botones {
+        flex-direction: column;
+        /* Cambia la dirección a columna para apilar los botones */
+        align-items: center;
+        /* Centra los botones horizontalmente */
+        gap: 10px;
+        /* Agrega espacio entre los botones */
+    }
+
+    .botones button {
+        width: 100%;
+        /* Ajusta el ancho de los botones según tus necesidades */
+        transition: background-color 0.3s ease;
+        /* Ajusta la duración según tus necesidades */
+    }
+
+    .muñeco {
+        display: none;
+    }
+
+    .mensajeencriptado {
+        margin-bottom: 10%;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    #encriptadoMensaje{
+        padding: 5%;
+        width: 110%;
+        height: 115%;
+    }
+
+    #encriptadoMensaje #mensajeDesencriptado{
+        height: 100px;
+    }
+}
+
